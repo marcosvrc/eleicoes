@@ -259,11 +259,11 @@
 
 <footer class="largura">
   <span id="erro"></span>
-  <span>Fonte: TSE<span id="eleicao-txt"></span>. Atualiza sozinho a cada 5 minutos.</span>
+  <span>Fonte: TSE<span id="eleicao-txt"></span>. Atualiza sozinho a cada 10 segundos.</span>
 </footer>
 
 <script>
-const INTERVALO_MS = 5 * 60 * 1000;
+const INTERVALO_MS = 10000;
 const CANDIDATOS = {
   lula:   n => n.includes('LULA'),
   flavio: n => n.includes('FLAVIO') || n.includes('BOLSONARO'),
