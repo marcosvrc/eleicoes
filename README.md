@@ -79,11 +79,25 @@ Dicas:
   rode com `ELEICAO=<código> python3 servidor.py`.
 - **Porta em uso**: rode com outra porta, por exemplo `PORTA=8080 python3 servidor.py`.
 
+## Git
+
+Para registrar e enviar mudanças:
+```bash
+git status                      # vê o que mudou
+git add index.html              # escolhe os arquivos (ou git add . para todos)
+git commit -m "Descreva a mudança"
+git push
+```
+
+Para trazer mudanças feitas em outra máquina: `git pull`.
+
+O `.gitignore` deixa de fora `__pycache__/` e as cópias `*.backup-*`; o histórico de commits substitui essas cópias.
+Para voltar um arquivo à versão do último commit: `git restore index.html`.
+
 ## Arquivos
 
 | Arquivo        | Descrição                                   |
 |----------------|---------------------------------------------|
 | `index.html`   | Página da apuração                          |
 | `servidor.py`  | Servidor local e repasse das chamadas ao TSE |
-| `LEIAME.md`    | Instruções rápidas de uso e de git          |
 | `.gitignore`   | Deixa de fora `__pycache__/` e as cópias `*.backup-*` |
