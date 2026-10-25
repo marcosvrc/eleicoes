@@ -17,3 +17,27 @@ A página consulta o TSE a cada 10 segundos e mostra nome (`nmu`), percentual (`
 dos dois candidatos, a diferença entre eles, as urnas apuradas e o gráfico da evolução.
 O histórico do 2º turno fica salvo no navegador, separado do 1º; o botão "Limpar histórico" zera o gráfico.
 Se algo falhar, a mensagem de erro aparece no rodapé e o JSON completo sai no console (F12).
+
+## Git
+
+O código está em https://github.com/marcosvrc/eleicoes (branch `main`).
+
+Para baixar em outra máquina:
+```bash
+git clone https://github.com/marcosvrc/eleicoes.git
+cd eleicoes
+python3 servidor.py
+```
+
+Para registrar e enviar mudanças:
+```bash
+git status                      # vê o que mudou
+git add index.html              # escolhe os arquivos (ou git add . para todos)
+git commit -m "Descreva a mudança"
+git push
+```
+
+Para trazer mudanças feitas em outra máquina: `git pull`.
+
+O `.gitignore` deixa de fora `__pycache__/` e as cópias `*.backup-*`; o histórico de commits substitui essas cópias.
+Para voltar um arquivo à versão do último commit: `git restore index.html`.
